@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 1505648156}
   - component: {fileID: 1505648155}
   - component: {fileID: 1505648157}
+  - component: {fileID: 1505648158}
   m_Layer: 0
   m_Name: Short-Lazer-Ship
   m_TagString: Untagged
@@ -422,6 +423,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760b92c1b6ca73d409890ef2767fb795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1505648158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505648154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59adb3347999f314ca1f89cd1eaf0c00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 127473597839469134, guid: 27f01b027906cb54b9ed41c32e3bf5c6,
+    type: 3}
+  shootingInterval: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
