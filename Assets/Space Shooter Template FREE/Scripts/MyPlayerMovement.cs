@@ -13,4 +13,3 @@ public class MyPlayerMovement : MonoBehaviour
         transform.position = worldPoint;
     }
 }
-

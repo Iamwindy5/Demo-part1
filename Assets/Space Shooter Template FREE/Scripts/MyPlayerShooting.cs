@@ -24,7 +24,6 @@ public class MyPlayerShooting : MonoBehaviour
 
     private void ShootBullet()
     {
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
+        Instantiate(bulletPrefab, transform.position + new Vector3(0, 1f, 0), transform.rotation);
     }
 }
-
