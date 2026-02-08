@@ -1,23 +1,11 @@
 ﻿using UnityEngine;
 
-public class MyEnemyHealth : MonoBehaviour
+public class MyEnemyHealth : MyHealth
 {
-    // [MỚI] Biến để chứa hiệu ứng nổ
-    public GameObject explosionPrefab;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    // Ghi đè hàm Die để báo log kiểm tra
+    protected override void Die()
     {
-        Die();
-    }
-
-    void Die()
-    {
-        // [MỚI] Nếu có gán hiệu ứng nổ thì tạo nó ra
-        if (explosionPrefab != null)
-        {
-            Instantiate(explosionPrefab, transform.position, transform.rotation);
-        }
-
-        Destroy(gameObject);
+        base.Die(); // Gọi hàm Die của cha (để nổ và biến mất)
+        Debug.Log("Enemy died!"); // Log thêm dòng chữ
     }
 }
