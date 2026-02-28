@@ -6,5 +6,6 @@ public class MyPlayerHealth : MyHealth
     {
         base.Die();
         Debug.Log("GAME OVER! Player died!");
+        FindObjectOfType<MyGameController>().ShowGameOver();
     }
 }

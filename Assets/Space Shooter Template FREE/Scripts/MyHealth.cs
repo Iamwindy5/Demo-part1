@@ -5,11 +5,16 @@ public class MyHealth : MonoBehaviour
     public GameObject explosionPrefab; // Hiệu ứng nổ
     public int defaultHealth = 1;      // Máu mặc định (1 viên là chết)
     protected int currentHealth;       // Máu hiện tại
+    public AudioClip explosionSound; 
 
     // Start này là virtual để con cái có thể sửa đổi nếu cần
     protected virtual void Start()
     {
         currentHealth = defaultHealth;
+        if (explosionSound != null)
+        {
+            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+        }
     }
 
     public void TakeDamage(int damage)
